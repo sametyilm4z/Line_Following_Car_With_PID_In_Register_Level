@@ -1,0 +1,410 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Samet YILMAZ, Abdullah Gül University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\samet\Documents\uVision\project_line_follower\lineFollowerSon\lineFollowerSon.uvprojx
+Project File Date:  01/21/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+main.c(1): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+main.c(2): warning: In file included from...
+./Clock_Config.h(1): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+main.c(3): warning: In file included from...
+./Delay_ms.h(1): warning: // comments are not allowed in this language [-Wcomment]
+#include "stm32f10x.h"                  // Device header
+                                        ^
+main.c(2): warning: In file included from...
+./Clock_Config.h(3): warning: no previous prototype for function 'initClockPLL' [-Wmissing-prototypes]
+void initClockPLL(void)
+     ^
+./Clock_Config.h(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initClockPLL(void)
+^
+static 
+main.c(3): warning: In file included from...
+./Delay_ms.h(3): warning: no previous prototype for function 'TIM2Config' [-Wmissing-prototypes]
+void TIM2Config (void)
+     ^
+./Delay_ms.h(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2Config (void)
+^
+static 
+./Delay_ms.h(18): warning: no previous prototype for function 'delay_us' [-Wmissing-prototypes]
+void delay_us (uint16_t us)
+     ^
+./Delay_ms.h(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_us (uint16_t us)
+^
+static 
+./Delay_ms.h(32): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for(uint16_t i=0;i<ms;i++)
+            ^
+./Delay_ms.h(32): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+./Delay_ms.h(30): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms (uint16_t ms)
+     ^
+./Delay_ms.h(30): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms (uint16_t ms)
+^
+static 
+main.c(12): warning: no previous extern declaration for non-static variable 'data' [-Wmissing-variable-declarations]
+int data[8] = { 0, 0, 0, 0, 0, 0, 0, 0};
+    ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int data[8] = { 0, 0, 0, 0, 0, 0, 0, 0};
+^
+main.c(15): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+  float Kp = 0.015; //0.015
+        ~~   ^~~~~
+main.c(15): warning: no previous extern declaration for non-static variable 'Kp' [-Wmissing-variable-declarations]
+  float Kp = 0.015; //0.015
+        ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  float Kp = 0.015; //0.015
+  ^
+main.c(16): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+        float Ki = 0.003; //0.003
+              ~~   ^~~~~
+main.c(16): warning: no previous extern declaration for non-static variable 'Ki' [-Wmissing-variable-declarations]
+        float Ki = 0.003; //0.003
+              ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        float Ki = 0.003; //0.003
+        ^
+main.c(17): warning: no previous extern declaration for non-static variable 'Kd' [-Wmissing-variable-declarations]
+        float Kd = 10;//10
+              ^
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        float Kd = 10;//10
+        ^
+main.c(19): warning: no previous extern declaration for non-static variable 'errors' [-Wmissing-variable-declarations]
+int errors[10] = {0,0,0,0,0,0,0,0,0,0};
+    ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int errors[10] = {0,0,0,0,0,0,0,0,0,0};
+^
+main.c(20): warning: no previous extern declaration for non-static variable 'error_sum' [-Wmissing-variable-declarations]
+int error_sum = 0;
+    ^
+main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int error_sum = 0;
+^
+main.c(21): warning: no previous extern declaration for non-static variable 'maxspeedr' [-Wmissing-variable-declarations]
+  const uint8_t maxspeedr = 100;
+                ^
+main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  const uint8_t maxspeedr = 100;
+        ^
+main.c(22): warning: no previous extern declaration for non-static variable 'maxspeedl' [-Wmissing-variable-declarations]
+        const uint8_t maxspeedl = 100;
+                      ^
+main.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        const uint8_t maxspeedl = 100;
+              ^
+main.c(23): warning: no previous extern declaration for non-static variable 'basespeedr' [-Wmissing-variable-declarations]
+        const uint8_t basespeedr = 50;
+                      ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        const uint8_t basespeedr = 50;
+              ^
+main.c(24): warning: no previous extern declaration for non-static variable 'basespeedl' [-Wmissing-variable-declarations]
+        const uint8_t basespeedl = 50;
+                      ^
+main.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        const uint8_t basespeedl = 50;
+              ^
+main.c(25): warning: no previous extern declaration for non-static variable 'ARR_const' [-Wmissing-variable-declarations]
+        const int ARR_const = 10;
+                  ^
+main.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        const int ARR_const = 10;
+              ^
+main.c(26): warning: no previous extern declaration for non-static variable 'lastError' [-Wmissing-variable-declarations]
+  int lastError = 0;
+      ^
+main.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int lastError = 0;
+  ^
+main.c(33): warning: no previous extern declaration for non-static variable 'varan' [-Wmissing-variable-declarations]
+        int varan = 0;
+            ^
+main.c(33): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        int varan = 0;
+        ^
+main.c(34): warning: no previous extern declaration for non-static variable 'actives' [-Wmissing-variable-declarations]
+  int actives =0;
+      ^
+main.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int actives =0;
+  ^
+main.c(35): warning: no previous extern declaration for non-static variable 'last_end' [-Wmissing-variable-declarations]
+int last_end=0;
+    ^
+main.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int last_end=0;
+^
+main.c(36): warning: no previous extern declaration for non-static variable 'last_idle' [-Wmissing-variable-declarations]
+int last_idle=0;
+    ^
+main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int last_idle=0;
+^
+main.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOB->CRL &= ~((1<<2));
+             ~~ ^~~~~~~~~
+main.c(49): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOB->CRL &= ~(1<<6);
+             ~~ ^~~~~~~
+main.c(52): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOB->CRH &= ~((1<<10));
+             ~~ ^~~~~~~~~~
+main.c(55): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  GPIOB->CRH &= ~(1<<14);
+             ~~ ^~~~~~~~
+main.c(38): warning: no previous prototype for function 'initGPIO' [-Wmissing-prototypes]
+void initGPIO (void)
+     ^
+main.c(38): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initGPIO (void)
+^
+static 
+main.c(58): warning: declaration shadows a variable in the global scope [-Wshadow]
+void motor_control (int motorspeedl, int motorspeedr) 
+                        ^
+main.c(31): note: previous declaration is here
+  int motorspeedl;
+      ^
+main.c(58): warning: declaration shadows a variable in the global scope [-Wshadow]
+void motor_control (int motorspeedl, int motorspeedr) 
+                                         ^
+main.c(32): note: previous declaration is here
+  int motorspeedr;
+      ^
+main.c(58): warning: no previous prototype for function 'motor_control' [-Wmissing-prototypes]
+void motor_control (int motorspeedl, int motorspeedr) 
+     ^
+main.c(58): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void motor_control (int motorspeedl, int motorspeedr) 
+^
+static 
+main.c(93): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL &= ~(3<<28) & ~(3<<24) & ~(3<<20) & ~(3<<16) & ~(3<<12) & ~(3<<8) & ~(3<<4) & ~(3<<0); // set pin as input
+                   ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+main.c(94): warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+        GPIOA->CRL |= (2<<30) | (2<<26) | (2<<22) | (2<<18) | (2<<14) | (2<<10) | (2<<6) | (2<<2);      // set pin with pull-up/pull-down  
+                       ~^ ~~
+main.c(94): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL |= (2<<30) | (2<<26) | (2<<22) | (2<<18) | (2<<14) | (2<<10) | (2<<6) | (2<<2);      // set pin with pull-up/pull-down  
+                   ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+main.c(85): warning: no previous prototype for function 'QTR8_config' [-Wmissing-prototypes]
+void QTR8_config (void)
+     ^
+main.c(85): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void QTR8_config (void)
+^
+static 
+main.c(102): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+    int pos = 0;
+        ^
+main.c(99): warning: no previous prototype for function 'QTR8_Read' [-Wmissing-prototypes]
+int QTR8_Read()
+    ^
+main.c(99): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int QTR8_Read()
+^
+static 
+main.c(99): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+int QTR8_Read()
+             ^
+main.c(218): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+TIM2->CCR4= Cl4; //duty cycle ch4 
+          ~ ^~~
+main.c(219): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+TIM2->CCR3= Cl3; //duty cycle ch3
+          ~ ^~~
+main.c(227): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+TIM3->CCR4= Cr4; //duty cycle ch4 
+          ~ ^~~
+main.c(228): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+TIM3->CCR3= Cr3; //duty cycle ch3
+          ~ ^~~
+main.c(287): warning: declaration shadows a variable in the global scope [-Wshadow]
+void past_errors (int error) 
+                      ^
+main.c(29): note: previous declaration is here
+  int error;
+      ^
+main.c(287): warning: no previous prototype for function 'past_errors' [-Wmissing-prototypes]
+void past_errors (int error) 
+     ^
+main.c(287): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void past_errors (int error) 
+^
+static 
+main.c(294): warning: no previous prototype for function 'errors_sum' [-Wmissing-prototypes]
+int errors_sum (int index) 
+    ^
+main.c(294): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int errors_sum (int index) 
+^
+static 
+main.c(307): warning: declaration shadows a variable in the global scope [-Wshadow]
+  int error = 4500 - position;
+      ^
+main.c(29): note: previous declaration is here
+  int error;
+      ^
+main.c(316): warning: implicit conversion turns floating-point number into integer: 'float' to 'int' [-Wfloat-conversion]
+  motorspeed = P*Kp + I*Ki + D*Kd;
+             ~ ~~~~~~~~~~~~^~~~~~
+main.c(316): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+  motorspeed = P*Kp + I*Ki + D*Kd;
+                             ^~
+main.c(316): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+  motorspeed = P*Kp + I*Ki + D*Kd;
+                      ^~
+main.c(316): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+  motorspeed = P*Kp + I*Ki + D*Kd;
+               ^~
+main.c(307): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+  int error = 4500 - position;
+      ^
+main.c(375): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(374): warning: 'return' will never be executed [-Wunreachable-code-return]
+return 0;
+       ^
+main.c(14): warning: no previous extern declaration for non-static variable 'position' [-Wmissing-variable-declarations]
+int position;
+    ^
+main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int position;
+^
+main.c(18): warning: no previous extern declaration for non-static variable 'P' [-Wmissing-variable-declarations]
+        int P, I, D;
+            ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        int P, I, D;
+        ^
+main.c(18): warning: no previous extern declaration for non-static variable 'I' [-Wmissing-variable-declarations]
+        int P, I, D;
+               ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        int P, I, D;
+        ^
+main.c(18): warning: no previous extern declaration for non-static variable 'D' [-Wmissing-variable-declarations]
+        int P, I, D;
+                  ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+        int P, I, D;
+        ^
+main.c(27): warning: no previous extern declaration for non-static variable 'i' [-Wmissing-variable-declarations]
+  int i;
+      ^
+main.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int i;
+  ^
+main.c(28): warning: no previous extern declaration for non-static variable 'k' [-Wmissing-variable-declarations]
+  int k;
+      ^
+main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int k;
+  ^
+main.c(29): warning: no previous extern declaration for non-static variable 'error' [-Wmissing-variable-declarations]
+  int error;
+      ^
+main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int error;
+  ^
+main.c(30): warning: no previous extern declaration for non-static variable 'motorspeed' [-Wmissing-variable-declarations]
+  int motorspeed;
+      ^
+main.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int motorspeed;
+  ^
+main.c(31): warning: no previous extern declaration for non-static variable 'motorspeedl' [-Wmissing-variable-declarations]
+  int motorspeedl;
+      ^
+main.c(31): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int motorspeedl;
+  ^
+main.c(32): warning: no previous extern declaration for non-static variable 'motorspeedr' [-Wmissing-variable-declarations]
+  int motorspeedr;
+      ^
+main.c(32): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  int motorspeedr;
+  ^
+67 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=4156 RO-data=268 RW-data=12 ZI-data=1768  
+".\Objects\lineFollowerSon.axf" - 0 Error(s), 68 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/samet/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/samet/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
